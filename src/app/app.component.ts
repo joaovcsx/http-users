@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { UsersService } from './services/users.service'
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.sass']
 })
 export class AppComponent {
-  title = 'http-users';
+  constructor(
+    private _users: UsersService
+  ) { }
+
+  getUsers() {
+    this._users.getUsers()
+  }
 }
