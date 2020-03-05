@@ -12,19 +12,28 @@ export class UsersService {
   ) { }
 
   getUsers() {
-    const url = 'https://jsonplaceholder.typicode.com/users';
-    this.http.get(url).subscribe(response => {
-      console.log(response)
-    });
-    // return new Observable<User>(
-    //   subscriber => {
-    //     const url = 'https://jsonplaceholder.typicode.com/users';
-    //     this.http.get(url).subscribe(response => {
-    //       let users = new Array<User>();
-    //         users = response['']
-    //         subscriber.next();
-    //     })
-    //   }
-    // )
+    return new Observable<Array<User>>(
+      subscriber => {
+        const url = 'https://jsonplaceholder.typicode.com/users';
+        this.http.get(url).subscribe(response => {
+          let users = new Array<User>();
+          users = (response as Array<User>);
+          subscriber.next(users);
+        })
+      }
+    )
   };
+
+  getUser(id: number) {
+    return new Observable<User>(
+      subscriber => {
+        const url = `https://jsonplaceholder.typicode.com/users/${id}`;
+        this.http.get(url).subscribe(response => {
+          let user = new User();
+          user = (response as User);
+          subscriber.next(user);
+        })
+      }
+    )
+  }
 }

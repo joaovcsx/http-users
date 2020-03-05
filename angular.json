@@ -1,6 +1,6 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
-  "version": 1, 
+  "version": 1,
   "newProjectRoot": "projects",
   "projects": {
     "http-users": {
@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "http-users"
+    }
+  },
+  "defaultProject": "http-users",
+  "cli": {
+    "analytics": "f6fad72a-5750-473d-9c9d-f16b2cc4cb75"
+  }
 }

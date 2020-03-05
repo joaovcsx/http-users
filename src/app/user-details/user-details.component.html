@@ -1,0 +1,17 @@
+<h3> Dados do usuário </h3>
+<div *ngIf="user">
+    <p><b>Id: </b>{{user.id}}</p>
+    <p><b>Nome</b>: {{user.name}}</p>
+    <p><b>Username</b>: {{user.username}}</p>
+    <p><b>Email:</b> {{user.email}}</p>
+    <p><b>Endereço:</b> {{user.address.street}}</p>
+    <p><b>Telefone:</b> {{user.phone}}</p>
+    <p><b>Website:</b> {{user.website}}</p>
+    <p><b>Company:</b> {{user.company}}</p>
+</div><br/>
+
+<p> Json </p>
+{{user | json}}
+
+<br/><br/><br/><br/>
+<button [routerLink]="['/']">Voltar</button>

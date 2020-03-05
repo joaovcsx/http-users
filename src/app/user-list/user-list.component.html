@@ -1,0 +1,8 @@
+<button (click)="getUsers()">Get users</button>
+
+<div *ngFor="let user of users">
+    <p>Id: {{user.id}}</p>
+    <p>Nome: {{user.name}}</p>
+    <p>email: {{user.email}}</p>
+    <button [routerLink]="['/user', user.id]">Detalhes</button>
+</div>
