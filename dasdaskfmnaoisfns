@@ -1,0 +1,9 @@
+user.email=joaovc.5814@gmail.com
+user.name=JoaoQuick
+core.repositoryformatversion=0
+core.filemode=false
+core.bare=false
+core.logallrefupdates=true
+core.ignorecase=true
+remote.origin.url=git@github.com:JoaoQuick/http-users.git
+remote.origin.fetch=+refs/heads/*:refs/remotes/origin/*
